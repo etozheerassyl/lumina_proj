@@ -198,8 +198,10 @@ fun TemplateSelectionScreen(navController: NavController, viewModel: LuminaViewM
         Text("Choose Style", fontFamily = GeologicaFont, fontWeight = FontWeight.Bold, fontSize = 32.sp, color = MaterialTheme.colorScheme.onBackground)
         Spacer(modifier = Modifier.height(20.dp))
 
-        TemplateOption("Studio", "Pro Light", Icons.Filled.LightMode, selectedId == 1) { selectedId = 1; viewModel.selectedTemplateRes = R.drawable.ic_launcher_background }
+        TemplateOption("Silk Luxury", "Elegant dark silk background with soft golden lighting.", Icons.Filled.MonetizationOn, selectedId == 1) { selectedId = 1; viewModel.selectedTemplateRes = R.drawable.ic_launcher_background }
         TemplateOption("Nature", "Wild Vibe", Icons.Filled.Landscape, selectedId == 2) { selectedId = 2; viewModel.selectedTemplateRes = R.drawable.ic_launcher_background }
+        TemplateOption("City", "Urban", Icons.Filled.LocationCity, selectedId == 3) { selectedId = 3; viewModel.selectedTemplateRes = R.drawable.ic_launcher_background }
+        TemplateOption("Studio", "Minimalist white table, sunlight, shadows of plants.", Icons.Filled.Star, selectedId == 4) { selectedId = 4; viewModel.selectedTemplateRes = R.drawable.ic_launcher_background }
         Spacer(modifier = Modifier.weight(1f))
         Button(onClick = { navController.navigate("processing") }, modifier = Modifier.fillMaxWidth().height(56.dp), colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary), shape = RoundedCornerShape(12.dp)) { Text("Generate", fontSize = 18.sp, fontWeight = FontWeight.Bold, color = Color.White) }
     }
